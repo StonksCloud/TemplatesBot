@@ -23,7 +23,7 @@ public class DiscordBot extends Bot<DiscordBot> {
     @Override
     public void initialize() {
         this.templates = new Templates(PlatformType.DISCORD, this);
-        this.getTemplates().getConfigManager().saveConfig("discord-config.json", new DiscordConfig(false, "ODkxMzY3NzA0ODY1NDI3NTA3.YU9U3Q.MO6IiZJx8qNDf4iCEOHYGvDUFLA"), false);
+        this.getTemplates().getConfigManager().saveConfig("discord-config.json", new DiscordConfig(false, ""), false);
         this.discordConfig = this.getTemplates().getConfigManager().readConfig("discord-config.json", DiscordConfig.class);
         if (this.discordConfig != null && !this.discordConfig.getEnabled()) this.terminate();
 
